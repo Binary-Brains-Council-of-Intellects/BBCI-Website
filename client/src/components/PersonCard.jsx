@@ -81,14 +81,13 @@ export default function PersonCard({ person }) {
           </ul>
         ) : null}
 
-        {/* Footer Meta */}
         <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
           <div className="flex items-center gap-1">
             <Icon name="FiCheckCircle" className="w-3.5 h-3.5 text-bbci-teal" />
-            <span>{isFounder ? "Founding Signatory" : "Executive Officer"}</span>
+            <span>{isFounder ? "Founder & President" : "Founding Fellow"}</span>
           </div>
 
-          <span className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded border border-slate-200">Verified</span>
+          <span className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded border border-slate-200">BBCI Council</span>
         </div>
       </div>
 

@@ -30,7 +30,14 @@ import {
   FiCopy, 
   FiBookmark,
   FiCompass,
-  FiTerminal
+  FiTerminal,
+  FiActivity,
+  FiCode,
+  FiZap,
+  FiTrendingUp,
+  FiDatabase,
+  FiVideo,
+  FiMic
 } from 'react-icons/fi';
 import { 
   FaLinkedin, 
@@ -75,6 +82,14 @@ const iconMap = {
   Bookmark: FiBookmark,
   Compass: FiCompass,
   Terminal: FiTerminal,
+  Activity: FiActivity,
+  Code: FiCode,
+  Zap: FiZap,
+  TrendingUp: FiTrendingUp,
+  Database: FiDatabase,
+  Video: FiVideo,
+  Mic: FiMic,
+  Lightbulb: FiZap,
 
   // Direct Fi mappings
   FiGlobe,
@@ -109,6 +124,13 @@ const iconMap = {
   FiBookmark,
   FiCompass,
   FiTerminal,
+  FiActivity,
+  FiCode,
+  FiZap,
+  FiTrendingUp,
+  FiDatabase,
+  FiVideo,
+  FiMic,
 
   // Social Icons
   LinkedIn: FaLinkedin,

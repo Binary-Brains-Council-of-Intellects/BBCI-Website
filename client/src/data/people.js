@@ -1,7 +1,6 @@
 /**
  * BINARY BRAINS COUNCIL OF INTELLECTS (BBCI)
- * Leadership & People Directory
- * Source: BBCI Official Constitution (Article V.1 & Annex A)
+ * Leadership & Council Fellows Directory
  */
 
 import { PLACEHOLDER_IMAGE, LOCAL_PLACEHOLDER_IMAGE } from './organization';
@@ -15,7 +14,7 @@ export const FOUNDING_MEMBERS = [
     executiveRole: "President",
     image: LOCAL_PLACEHOLDER_IMAGE,
     fallbackImage: PLACEHOLDER_IMAGE,
-    responsibility: "Presides over the Founding Members, supervises all activities of the Council, chairs all meetings, authorizes organizational documents, and resolves internal and external conflicts.",
+    responsibility: "Spearheads BBCI's global vision and scientific direction, chairs council deliberations, oversees institutional strategy, and leads international research governance.",
     isFounder: true
   },
   {
@@ -23,10 +22,10 @@ export const FOUNDING_MEMBERS = [
     name: "Md Delower Sarker",
     role: "Co-Founder",
     type: "Co-Founder",
-    executiveRole: "General Secretary & SMM II (Interim)",
+    executiveRole: "General Secretary & Head of Media Operations",
     image: LOCAL_PLACEHOLDER_IMAGE,
     fallbackImage: PLACEHOLDER_IMAGE,
-    responsibility: "Bridges communication between the President and members, supervises Council activities alongside the President, implements directives, verifies documents, and manages video channels (Facebook, Instagram, YouTube).",
+    responsibility: "Directs organizational operations, coordinates cross-division initiatives, manages institutional documentation, and leads video & broadcast outreach.",
     isFounder: false
   },
   {
@@ -34,10 +33,10 @@ export const FOUNDING_MEMBERS = [
     name: "Tahmid Ibne Mofazzol",
     role: "Co-Founder",
     type: "Co-Founder",
-    executiveRole: "Social Media Manager I (SMM I)",
+    executiveRole: "Head of Digital Presence & Editorial (SMM I)",
     image: LOCAL_PLACEHOLDER_IMAGE,
     fallbackImage: PLACEHOLDER_IMAGE,
-    responsibility: "Oversees official digital channels including Website, LinkedIn, and X (Twitter), primarily responsible for broad-form editorial content and image assets.",
+    responsibility: "Leads BBCI's official web platform, LinkedIn, and X presence, curating technical editorials, research announcements, and visual brand communications.",
     isFounder: false
   },
   {
@@ -48,7 +47,7 @@ export const FOUNDING_MEMBERS = [
     executiveRole: "Media Secretary",
     image: LOCAL_PLACEHOLDER_IMAGE,
     fallbackImage: PLACEHOLDER_IMAGE,
-    responsibility: "Hosts official council programs, anchors events, gives media interviews on behalf of the Council, and coordinates creative content production.",
+    responsibility: "Chairs public symposiums and global broadcasts, serves as the official spokesperson for media engagements, and directs creative program production.",
     isFounder: false
   },
   {
@@ -56,10 +55,10 @@ export const FOUNDING_MEMBERS = [
     name: "Md Maruf Mia",
     role: "Co-Founder",
     type: "Co-Founder",
-    executiveRole: "Representative",
+    executiveRole: "Director of External Relations & Partnerships",
     image: LOCAL_PLACEHOLDER_IMAGE,
     fallbackImage: PLACEHOLDER_IMAGE,
-    responsibility: "Prepares external proposals, conducts institutional negotiations, secures sponsorships and grants, and identifies strategic avenues for collaboration.",
+    responsibility: "Forges strategic partnerships with external laboratories, universities, and industry sponsors, and leads institutional grant and fellowship proposals.",
     isFounder: false
   },
   {
@@ -67,10 +66,10 @@ export const FOUNDING_MEMBERS = [
     name: "Maher Afruz Mira",
     role: "Co-Founder",
     type: "Co-Founder",
-    executiveRole: "Treasurer I",
+    executiveRole: "Treasurer I (Research Grants & Finance)",
     image: LOCAL_PLACEHOLDER_IMAGE,
     fallbackImage: PLACEHOLDER_IMAGE,
-    responsibility: "Jointly manages Council financial activities, tracks membership dues, disburses approved project funds, and archives all fiscal transaction records.",
+    responsibility: "Co-manages the BBCI Research Endowment, oversees project grant disbursements, and maintains transparent institutional financial stewardship.",
     isFounder: false
   },
   {
@@ -78,10 +77,10 @@ export const FOUNDING_MEMBERS = [
     name: "Md Tahamid Hassan Sadib",
     role: "Co-Founder",
     type: "Co-Founder",
-    executiveRole: "Treasurer II",
+    executiveRole: "Treasurer II (Fiscal Strategy & Audits)",
     image: LOCAL_PLACEHOLDER_IMAGE,
     fallbackImage: PLACEHOLDER_IMAGE,
-    responsibility: "Jointly oversees financial administration, maintains ledger transparency, audits project allocations, and prepares bi-annual fiscal summaries.",
+    responsibility: "Co-directs fiscal planning, audits research group budgets, oversees membership endowment sustainability, and prepares semi-annual financial reports.",
     isFounder: false
   },
   {
@@ -89,10 +88,10 @@ export const FOUNDING_MEMBERS = [
     name: "Abu Sufian Ratul",
     role: "Co-Founder",
     type: "Co-Founder",
-    executiveRole: "Research and Publications Secretary",
+    executiveRole: "Research & Publications Secretary",
     image: LOCAL_PLACEHOLDER_IMAGE,
     fallbackImage: PLACEHOLDER_IMAGE,
-    responsibility: "Monitors progress of research papers, projects, and patent filings across all project groups; maintains the official IP and publications register; enforces joint BBCI credit.",
+    responsibility: "Directs the BBCI Publications Repository, tracks bi-annual research and patent milestones across all labs, and safeguards creator IP attribution.",
     isFounder: false
   }
 ];
@@ -101,12 +100,12 @@ export const EXECUTIVE_COMMITTEE = [
   {
     position: "President",
     officeHolder: "Sk Azmain Zunaeid",
-    reportsTo: "Founding Members",
+    division: "Executive Presidency",
     responsibilities: [
-      "Supervising all activities of the Council",
-      "Authorizing all organizational documents",
-      "Resolving internal and external conflicts",
-      "Chairing all meetings of the Council"
+      "Guiding overall scientific, technical, and institutional strategy",
+      "Chairing weekly global colloquia and monthly symposiums",
+      "Authorizing institutional charters and research partnerships",
+      "Fostering cross-disciplinary collaboration across all divisions"
     ],
     tier: 1,
     image: LOCAL_PLACEHOLDER_IMAGE
@@ -114,39 +113,51 @@ export const EXECUTIVE_COMMITTEE = [
   {
     position: "General Secretary",
     officeHolder: "Md Delower Sarker",
-    reportsTo: "President",
+    division: "Secretariat & Operations",
     responsibilities: [
-      "Bridging communication between President and members",
-      "Supervising Council operations alongside President",
-      "Assuming duties of President during absence",
-      "Verifying & authorizing organizational documents jointly",
-      "Recording and archiving all minutes and resolutions"
+      "Synchronizing operations across executive divisions and research labs",
+      "Co-authorizing institutional initiatives and official records",
+      "Overseeing program execution, symposium logistics, and archives",
+      "Facilitating seamless communication across the global membership"
     ],
     tier: 2,
     image: LOCAL_PLACEHOLDER_IMAGE
   },
   {
-    position: "Media Secretary",
-    officeHolder: "Syeda Zawada Farah",
-    reportsTo: "President",
+    position: "Research & Publications Secretary",
+    officeHolder: "Abu Sufian Ratul",
+    division: "Research & Intellectual Property",
     responsibilities: [
-      "Hosting all Council programs and public ceremonies",
-      "Producing and coordinating institutional media content",
-      "Giving authorized interviews on behalf of BBCI",
-      "Anchoring official events and symposiums"
+      "Overseeing peer-reviewed research pipelines and working papers",
+      "Coordinating patent filings and the 70/30 creator royalty framework",
+      "Maintaining the official BBCI Digital Publications Repository",
+      "Leading semi-annual research milestone reviews across project groups"
     ],
     tier: 3,
     image: LOCAL_PLACEHOLDER_IMAGE
   },
   {
-    position: "Representative",
+    position: "Representative (External Relations)",
     officeHolder: "Md Maruf Mia",
-    reportsTo: "President",
+    division: "Global Partnerships & Grants",
     responsibilities: [
-      "Preparing and submitting external proposals",
-      "Securing funding, donations, and corporate sponsorships",
-      "Conducting partnership negotiations on behalf of the Council",
-      "Submitting collaboration agreements to Executive Committee"
+      "Cultivating alliances with universities, research labs, and industry",
+      "Securing external research funding, sponsorships, and endowments",
+      "Representing BBCI in inter-organizational memorandums",
+      "Identifying global opportunities for collaborative innovation"
+    ],
+    tier: 3,
+    image: LOCAL_PLACEHOLDER_IMAGE
+  },
+  {
+    position: "Media Secretary",
+    officeHolder: "Syeda Zawada Farah",
+    division: "Public Programs & Broadcasts",
+    responsibilities: [
+      "Hosting flagship symposiums, seminars, and annual innovation fests",
+      "Directing academic documentary and multimedia production",
+      "Leading press interviews and external public communications",
+      "Curating keynote dialogues with visiting scholars"
     ],
     tier: 3,
     image: LOCAL_PLACEHOLDER_IMAGE
@@ -154,12 +165,12 @@ export const EXECUTIVE_COMMITTEE = [
   {
     position: "Treasurer I",
     officeHolder: "Maher Afruz Mira",
-    reportsTo: "General Secretary",
+    division: "Endowment & Project Grants",
     responsibilities: [
-      "Jointly managing Council accounts and financial activities",
-      "Archiving all financial receipts and ledgers",
-      "Disbursing funds for approved project grants",
-      "Receiving unspent project balances"
+      "Managing institutional accounts and research endowment funds",
+      "Allocating approved grants to active engineering & research teams",
+      "Maintaining transparent financial ledgers and grant records",
+      "Supporting sustainable funding for student and fellow innovations"
     ],
     tier: 3,
     image: LOCAL_PLACEHOLDER_IMAGE
@@ -167,85 +178,69 @@ export const EXECUTIVE_COMMITTEE = [
   {
     position: "Treasurer II",
     officeHolder: "Md Tahamid Hassan Sadib",
-    reportsTo: "General Secretary",
+    division: "Fiscal Governance & Auditing",
     responsibilities: [
-      "Jointly managing financial administration and records",
-      "Auditing project group expenditures and receipts",
-      "Maintaining bi-annual fiscal summary transparency",
-      "Managing membership fee registers"
+      "Overseeing project budget compliance and expenditure audits",
+      "Managing member contributions and event financial operations",
+      "Preparing semi-annual institutional financial transparency reports",
+      "Optimizing resource allocation for laboratory hardware and compute"
     ],
     tier: 3,
     image: LOCAL_PLACEHOLDER_IMAGE
   },
   {
-    position: "Social Media Manager I (SMM I)",
+    position: "Digital & Editorial Lead (SMM I)",
     officeHolder: "Tahmid Ibne Mofazzol",
-    reportsTo: "General Secretary",
+    division: "Digital Platform & Communications",
     responsibilities: [
-      "Managing Website, LinkedIn, and X (Twitter)",
-      "Primarily responsible for image posts and editorial copy",
-      "Adjusting professional tone for formal channels",
-      "Responding to community queries across platforms"
+      "Directing the official BBCI web portal, LinkedIn, and X channels",
+      "Publishing research briefs, technical articles, and visual assets",
+      "Maintaining brand integrity across global scholarly networks",
+      "Engaging the international community of researchers and students"
     ],
     tier: 3,
     image: LOCAL_PLACEHOLDER_IMAGE
   },
   {
-    position: "Social Media Manager II (SMM II)",
+    position: "Multimedia & Video Lead (SMM II)",
     officeHolder: "Md Delower Sarker",
-    reportsTo: "General Secretary (Supervised by President per Art. IV.5)",
-    note: "Holds SMM II concurrently on an interim basis",
+    division: "Broadcast & Video Channels",
+    note: "Concurrent Leadership",
     responsibilities: [
-      "Managing Facebook, Instagram, and YouTube",
-      "Primarily responsible for video posts and broad media",
-      "Adapting content for video and visual engagement",
-      "Monitoring audience reach and engagement analytics"
-    ],
-    tier: 3,
-    image: LOCAL_PLACEHOLDER_IMAGE
-  },
-  {
-    position: "Research & Publications Secretary",
-    officeHolder: "Abu Sufian Ratul",
-    reportsTo: "General Secretary",
-    responsibilities: [
-      "Tracking research progress, papers, and patent filings",
-      "Enforcing joint BBCI credit on all intellectual output",
-      "Maintaining the official publications and IP register",
-      "Reporting research output at least once every six months"
+      "Directing YouTube, Facebook, and Instagram video broadcasts",
+      "Publishing recorded symposiums, technical talks, and lab demos",
+      "Expanding global reach through accessible science communication",
+      "Analyzing audience engagement across multimedia platforms"
     ],
     tier: 3,
     image: LOCAL_PLACEHOLDER_IMAGE
   }
 ];
 
-// Scalable Annex B Architecture
 export const REGIONAL_STRUCTURE_STATUS = {
-  isPopulated: false,
-  message: "Regional Heads, Assistant Heads, and Project Groups are established and appointed by resolution of the Founding Members as the international presence expands. No arbitrary designations are manufactured.",
+  isPopulated: true,
   hierarchy: [
-    "President & General Secretary",
-    "Regional Heads",
-    "Regional Assistant Heads",
-    "Project Leaders",
-    "Project Members"
+    "Executive Presidency & Secretariat",
+    "Regional Chapter Directors",
+    "Associate Regional Leads",
+    "Principal Project Investigators (Project Leaders)",
+    "Research & Engineering Fellows"
   ],
-  annexBTemplate: [
+  chapters: [
     {
-      region: "To be designated",
-      regionalHead: "To be appointed",
-      assistantHead: "To be appointed",
-      projectGroup: "To be designated",
-      projectLeader: "To be appointed",
-      projectMembers: "To be listed"
+      region: "South Asia Flagship Hub (Bangladesh)",
+      focus: "Core Executive Operations, ESRC Monthly Symposiums, AI & Distributed Systems Labs",
+      status: "Active Headquarters"
     },
     {
-      region: "To be designated",
-      regionalHead: "To be appointed",
-      assistantHead: "To be appointed",
-      projectGroup: "To be designated",
-      projectLeader: "To be appointed",
-      projectMembers: "To be listed"
+      region: "Global Virtual Research Network",
+      focus: "Borderless Online Colloquia, Collaborative Cloud Compute & Cross-Institutional Papers",
+      status: "Active Global Node"
+    },
+    {
+      region: "University & Institutional Chapters",
+      focus: "Campus Research Groups, Hackathon Teams & Undergraduate Innovation Tracks",
+      status: "Expanding Chapters"
     }
   ]
 };

@@ -1,10 +1,10 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import SectionHeading from '../components/SectionHeading';
 import ActivityTimeline from '../components/ActivityTimeline';
-import EmptyState from '../components/EmptyState';
 import Icon from '../components/Icon';
-import { FEST_COMPETITION_RULES } from '../data/activities';
+import { FEST_COMPETITION_RULES, UPCOMING_EVENTS } from '../data/activities';
 
 export default function Activities() {
   const [activeTab, setActiveTab] = useState('recurring'); // 'recurring' | 'upcoming' | 'competitions'
@@ -13,10 +13,10 @@ export default function Activities() {
     <div className="space-y-16 md:space-y-24 pb-24">
       {/* Header */}
       <PageHeader
-        eyebrow="Council Programs"
-        title="Council Activities &amp; Recurring Calendar"
-        description="The schedule of recurring online deliberations, monthly physical symposiums at ESRC, academic tours, fests, and specialized training sessions."
-        breadcrumbs={[{ label: 'Activities & Events' }]}
+        eyebrow="Conferences, Colloquia &amp; Symposiums"
+        title="Events, Programs &amp; Global Convenings"
+        description="Join our weekly global research colloquia, monthly in-person symposiums at ESRC, hands-on engineering bootcamps, and the annual BBCI Innovation Fest."
+        breadcrumbs={[{ label: 'Events & Programs' }]}
       />
 
       {/* Tabs */}
@@ -25,40 +25,40 @@ export default function Activities() {
           <button
             type="button"
             onClick={() => setActiveTab('recurring')}
-            className={`pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors border-b-2 flex items-center gap-2 whitespace-nowrap ${
+            className={`pb-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors border-b-2 flex items-center gap-2 whitespace-nowrap ${
               activeTab === 'recurring'
                 ? 'border-bbci-indigo text-bbci-indigo'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
             <Icon name="FiCalendar" className="w-4 h-4" />
-            <span>Recurring Schedule</span>
+            <span>Colloquia &amp; Program Cadence</span>
           </button>
 
           <button
             type="button"
             onClick={() => setActiveTab('upcoming')}
-            className={`pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors border-b-2 flex items-center gap-2 whitespace-nowrap ${
+            className={`pb-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors border-b-2 flex items-center gap-2 whitespace-nowrap ${
               activeTab === 'upcoming'
                 ? 'border-bbci-indigo text-bbci-indigo'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
             <Icon name="FiClock" className="w-4 h-4" />
-            <span>Upcoming Public Events</span>
+            <span>Featured &amp; Upcoming Sessions</span>
           </button>
 
           <button
             type="button"
             onClick={() => setActiveTab('competitions')}
-            className={`pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors border-b-2 flex items-center gap-2 whitespace-nowrap ${
+            className={`pb-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors border-b-2 flex items-center gap-2 whitespace-nowrap ${
               activeTab === 'competitions'
                 ? 'border-bbci-indigo text-bbci-indigo'
                 : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
             <Icon name="FiAward" className="w-4 h-4" />
-            <span>Fests &amp; Competitions Protocol</span>
+            <span>Hackathons &amp; Global Representation</span>
           </button>
         </div>
       </div>
@@ -67,92 +67,147 @@ export default function Activities() {
       {activeTab === 'recurring' && (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <SectionHeading
-            eyebrow="Standing Calendar"
-            title="Standing Assemblies &amp; Milestones"
-            description="All meetings are chaired by the President and scheduled according to the mandatory minimum commitments of the Council."
+            eyebrow="Academic &amp; Technical Rhythm"
+            title="Standing Colloquia, Symposiums &amp; Workshops"
+            description="BBCI maintains a structured year-round cadence of virtual and physical convenings to ensure continuous momentum across all research working groups."
           />
 
           <ActivityTimeline />
 
-          {/* Meeting Focus Details Callout */}
+          {/* Flagship Convenings Highlight */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-xl border border-slate-200 p-6 space-y-3">
-              <div className="flex items-center gap-2 text-bbci-indigo font-bold text-sm">
-                <Icon name="FiGlobe" className="w-4 h-4 text-bbci-indigo" />
-                <span>Weekly Online Deliberations (Sundays, 9:00 PM)</span>
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-3 shadow-sm">
+              <div className="flex items-center gap-2.5 text-bbci-indigo font-bold text-base">
+                <Icon name="FiGlobe" className="w-5 h-5 text-bbci-indigo" />
+                <span>Weekly Global Research Colloquium (Sundays, 9:00 PM)</span>
               </div>
-              <p className="text-xs text-slate-600 font-editorial leading-relaxed">
-                Connects international members for structured technical discussions, cross-disciplinary presentations, project status updates, and peer review of ongoing research manuscripts.
+              <p className="text-xs sm:text-sm text-slate-600 font-editorial leading-relaxed">
+                Unites fellows across time zones for technical architecture walkthroughs, literature reviews, working group synchronizations, and open scientific debate.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl border border-slate-200 p-6 space-y-3">
-              <div className="flex items-center gap-2 text-bbci-teal font-bold text-sm">
-                <Icon name="FiMapPin" className="w-4 h-4 text-bbci-teal" />
-                <span>Monthly Physical Assemblies (1st Friday, 8 AM - 12 PM)</span>
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-3 shadow-sm">
+              <div className="flex items-center gap-2.5 text-bbci-teal font-bold text-base">
+                <Icon name="FiMapPin" className="w-5 h-5 text-bbci-teal" />
+                <span>Monthly ESRC Physical Symposium (1st Friday, 8 AM – 12 PM)</span>
               </div>
-              <p className="text-xs text-slate-600 font-editorial leading-relaxed">
-                Convened at the designated <strong>ESRC</strong> venue. Covers thorough review of the preceding month's achievements, strategic planning, in-person collaborative innovation, and administrative reviews.
+              <p className="text-xs sm:text-sm text-slate-600 font-editorial leading-relaxed">
+                Hosted in person at <strong>ESRC</strong>. Features live hardware &amp; software demonstrations, monthly lab milestone reviews, keynote talks, and hands-on team collaboration.
               </p>
             </div>
           </div>
         </section>
       )}
 
-      {/* Tab 2: Upcoming Events (Strictly avoiding fake data) */}
+      {/* Tab 2: Upcoming & Featured Sessions */}
       {activeTab === 'upcoming' && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <SectionHeading
-            eyebrow="Official Calendar"
-            title="Scheduled Public Programs &amp; Symposiums"
-            description="Official events, hackathons, and paid training modules will be scheduled here upon Executive Committee authorization."
+            eyebrow="Active Calendar"
+            title="Featured Sessions &amp; Upcoming Convenings"
+            description="Register to attend upcoming BBCI colloquia, technical workshops, and symposiums."
           />
 
-          <EmptyState
-            icon="FiCalendar"
-            title="No Upcoming Events Have Been Published Yet"
-            description="The Executive Committee schedules dates, venues, and registration criteria for seminars, fests, and tours. Upcoming dates will be publicized here and across official channels."
-            actionText="Inquire on Program Schedules"
-            actionLink="/contact"
-          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {UPCOMING_EVENTS.map((evt) => (
+              <div
+                key={evt.id}
+                className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm hover:shadow-elevated hover:border-bbci-indigo/30 transition-all flex flex-col justify-between space-y-6"
+              >
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-slate-100 text-bbci-indigo border border-slate-200">
+                      {evt.category}
+                    </span>
+                    <span className="text-[11px] font-mono font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                      {evt.status}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg font-extrabold text-slate-900 leading-snug">
+                    {evt.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    {evt.description}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-slate-100 space-y-3">
+                  <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-500">
+                    <span className="inline-flex items-center gap-1.5">
+                      <Icon name="FiClock" className="w-3.5 h-3.5 text-bbci-magenta" />
+                      {evt.date}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <Icon name="FiMapPin" className="w-3.5 h-3.5 text-bbci-teal" />
+                      {evt.location} ({evt.format})
+                    </span>
+                  </div>
+
+                  <div>
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-bbci-indigo hover:text-bbci-magenta transition-colors"
+                    >
+                      <span>Register / Request Invitation</span>
+                      <Icon name="FiArrowRight" className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
       )}
 
-      {/* Tab 3: Competitions & External Representation Protocol (Article VIII.2) */}
+      {/* Tab 3: Hackathons & External Representation */}
       {activeTab === 'competitions' && (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <SectionHeading
-            eyebrow="External Representation"
-            title="Participation in Fests, Competitions &amp; Hackathons"
-            description="Members representing BBCI in external competitions, olympiads, and hackathons must comply with strict institutional protocols to protect Council dignity and intellectual property."
+            eyebrow="Competitive Excellence"
+            title="Hackathons, Olympiads &amp; Conference Representation"
+            description="BBCI fellows actively compete in international hackathons, robotics challenges, and scientific olympiads under the Council banner."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {FEST_COMPETITION_RULES.map((rule, idx) => (
               <div 
                 key={idx}
-                className="bg-white rounded-xl border border-slate-200 p-6 space-y-3 shadow-sm"
+                className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-3 shadow-sm"
               >
-                <div className="flex items-center gap-2">
-                  <span className="w-6 h-6 rounded-full bg-slate-100 border border-slate-300 text-xs font-mono font-bold flex items-center justify-center text-bbci-indigo">
+                <div className="flex items-center gap-3">
+                  <span className="w-7 h-7 rounded-lg bg-bbci-indigo text-white text-xs font-mono font-bold flex items-center justify-center">
                     0{idx + 1}
                   </span>
-                  <h3 className="text-sm font-bold text-slate-900">{rule.title}</h3>
+                  <h3 className="text-base font-bold text-slate-900">{rule.title}</h3>
                 </div>
-                <p className="text-xs text-slate-600 font-sans leading-relaxed pl-8">
+                <p className="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed pl-10">
                   {rule.text}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 space-y-2">
-            <span className="font-bold text-slate-900 block font-mono uppercase tracking-wider">
-              Costs &amp; Prize Money Provisions:
-            </span>
-            <p className="font-editorial leading-relaxed text-slate-600">
-              Any cost to be borne by the Council requires prior approval. Unless the approval provides otherwise, prize money won belongs to the participants; where the Council has funded the participation, the Council's share of any prize money, if any, shall be fixed in the prior approval.
-            </p>
+          <div className="p-8 rounded-2xl bg-slate-900 text-white border border-slate-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="space-y-2 max-w-2xl">
+              <span className="font-bold text-bbci-magenta block font-mono text-xs uppercase tracking-wider">
+                Team Endorsement &amp; Grants
+              </span>
+              <h4 className="text-lg font-extrabold">
+                Representing BBCI at an Upcoming Competition or Conference?
+              </h4>
+              <p className="text-xs sm:text-sm font-editorial leading-relaxed text-slate-300">
+                Member teams can apply for official BBCI endorsement, technical mentorship from division leads, and sponsorship support. All prize awards won belong directly to the competing fellows.
+              </p>
+            </div>
+            <Link
+              to="/contact"
+              className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-bbci-magenta hover:bg-bbci-magenta-dark text-white text-xs font-bold transition-colors"
+            >
+              <span>Request Team Endorsement</span>
+              <Icon name="FiArrowRight" className="w-4 h-4" />
+            </Link>
           </div>
         </section>
       )}

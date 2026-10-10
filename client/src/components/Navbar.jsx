@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import BbciLogo from './BbciLogo';
+import bbciLogoImg from '../assets/BBCI_Logo.jpeg';
 import Icon from './Icon';
 
 export default function Navbar() {
@@ -20,13 +20,12 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'People', path: '/people' },
-    { name: 'Projects', path: '/projects' },
     { name: 'Research', path: '/research' },
-    { name: 'Activities', path: '/activities' },
-    { name: 'Membership', path: '/membership' },
+    { name: 'Projects', path: '/projects' },
     { name: 'Publications', path: '/publications' },
-    { name: 'Constitution', path: '/constitution' },
+    { name: 'Events', path: '/activities' },
+    { name: 'Leadership', path: '/people' },
+    { name: 'Membership', path: '/membership' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -45,15 +44,19 @@ export default function Navbar() {
           <Link 
             to="/" 
             onClick={closeMobileMenu}
-            className="flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-bbci-indigo rounded-lg py-1"
+            className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-bbci-indigo rounded-lg py-1"
             aria-label="Binary Brains Council of Intellects - Home"
           >
-            <BbciLogo size="sm" />
+            <img 
+              src={bbciLogoImg} 
+              alt="Binary Brains Council of Intellects Official Logo" 
+              className="h-10 w-10 object-contain mix-blend-multiply flex-shrink-0 transition-transform duration-300 group-hover:scale-105"
+            />
             <div className="flex flex-col text-left">
-              <span className="font-bold tracking-tight text-bbci-indigo text-base leading-none">
+              <span className="font-extrabold tracking-tight text-bbci-indigo text-base leading-none">
                 BBCI
               </span>
-              <span className="text-[10px] uppercase font-semibold tracking-wider text-bbci-teal hidden sm:inline-block">
+              <span className="text-[10px] uppercase font-semibold tracking-wider text-bbci-teal hidden sm:inline-block mt-0.5">
                 Council of Intellects
               </span>
             </div>
@@ -85,7 +88,7 @@ export default function Navbar() {
               to="/membership"
               className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold tracking-wide text-white bg-bbci-indigo hover:bg-bbci-indigo-light shadow-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-bbci-magenta"
             >
-              <span>Apply for Membership</span>
+              <span>Join BBCI</span>
               <Icon name="FiArrowRight" className="w-3.5 h-3.5" />
             </Link>
 
@@ -131,7 +134,7 @@ export default function Navbar() {
                 onClick={closeMobileMenu}
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-bold text-white bg-bbci-indigo hover:bg-bbci-indigo-light shadow-sm transition-colors"
               >
-                <span>Apply for Membership</span>
+                <span>Join BBCI</span>
                 <Icon name="FiArrowRight" className="w-4 h-4" />
               </Link>
             </div>

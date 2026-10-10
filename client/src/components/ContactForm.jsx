@@ -8,7 +8,7 @@ export default function ContactForm() {
     name: '',
     email: '',
     affiliation: '',
-    category: 'General Inquiry',
+    category: 'Research & Collaboration',
     subject: '',
     message: ''
   });
@@ -29,20 +29,20 @@ export default function ContactForm() {
       await ApiService.submitContactMessage(formData);
       setResponseStatus({
         type: 'success',
-        message: 'Your inquiry has been formulated. When the production mail gateway is deployed, this message is directed to binarybrains.bbci@gmail.com.'
+        message: 'Thank you for reaching out to BBCI. Your inquiry has been logged for our Secretariat and Research Directorate at binarybrains.bbci@gmail.com.'
       });
       setFormData({
         name: '',
         email: '',
         affiliation: '',
-        category: 'General Inquiry',
+        category: 'Research & Collaboration',
         subject: '',
         message: ''
       });
     } catch {
       setResponseStatus({
         type: 'error',
-        message: 'Unable to process inquiry form at this time.'
+        message: 'Unable to submit your inquiry right now. Please email us directly at binarybrains.bbci@gmail.com.'
       });
     } finally {
       setSubmitting(false);
@@ -52,11 +52,14 @@ export default function ContactForm() {
   return (
     <div className="bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-10">
       <div className="mb-6">
-        <h3 className="text-xl font-bold text-slate-900">
-          Official Institutional Inquiries
+        <span className="text-[11px] font-mono uppercase tracking-wider font-bold text-bbci-magenta">
+          Direct Dispatch
+        </span>
+        <h3 className="text-xl font-bold text-slate-900 mt-1">
+          Send a Message to BBCI
         </h3>
         <p className="text-xs text-slate-500 font-editorial mt-1">
-          Direct correspondence to the Executive Committee of BBCI
+          Whether you are proposing a joint research project, applying for fellowship, or inquiring about our publications, our team will respond promptly.
         </p>
       </div>
 
@@ -90,7 +93,7 @@ export default function ContactForm() {
 
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1">
-              Official Email Address *
+              Email Address *
             </label>
             <input
               type="email"
@@ -107,7 +110,7 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1">
-              Institution / Discipline / Organization
+              Affiliation / University / Lab
             </label>
             <input
               type="text"
@@ -121,7 +124,7 @@ export default function ContactForm() {
 
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1">
-              Inquiry Classification *
+              Inquiry Topic *
             </label>
             <select
               name="category"
@@ -129,11 +132,11 @@ export default function ContactForm() {
               onChange={handleChange}
               className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-bbci-indigo focus:border-transparent bg-white"
             >
+              <option value="Research & Collaboration">Research Collaboration &amp; Labs</option>
+              <option value="Membership Evaluation">Fellowship &amp; Membership Application</option>
+              <option value="Sponsorship & Partnership">Institutional Partnership &amp; Grants</option>
+              <option value="Symposium & Events">Symposiums, Colloquia &amp; Speaking</option>
               <option value="General Inquiry">General Council Inquiry</option>
-              <option value="Research & Collaboration">Research &amp; Collaboration</option>
-              <option value="Membership Evaluation">Membership Application / Evaluation</option>
-              <option value="Sponsorship & Partnership">Sponsorship &amp; Partnerships (Representative)</option>
-              <option value="Media & Press">Media &amp; Press Relations</option>
             </select>
           </div>
         </div>
@@ -148,14 +151,14 @@ export default function ContactForm() {
             required
             value={formData.subject}
             onChange={handleChange}
-            placeholder="Concise summary of your inquiry"
+            placeholder="Concise summary of your inquiry or proposal"
             className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-bbci-indigo focus:border-transparent"
           />
         </div>
 
         <div>
           <label className="block text-xs font-semibold text-slate-700 mb-1">
-            Message Content *
+            Message *
           </label>
           <textarea
             name="message"
@@ -163,7 +166,7 @@ export default function ContactForm() {
             required
             value={formData.message}
             onChange={handleChange}
-            placeholder="Detail your inquiry, proposed collaborative agenda, or background..."
+            placeholder="Share details regarding your research domain, collaboration proposal, or membership interest..."
             className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-bbci-indigo focus:border-transparent font-sans"
           ></textarea>
         </div>
@@ -172,20 +175,20 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={submitting}
-            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg bg-bbci-indigo hover:bg-bbci-indigo-light text-white text-xs font-bold shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-bbci-magenta disabled:opacity-50"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-bbci-indigo hover:bg-bbci-indigo-light text-white text-xs font-bold shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-bbci-magenta disabled:opacity-50"
           >
             {submitting ? (
-              <span>Preparing Communication...</span>
+              <span>Sending Inquiry...</span>
             ) : (
               <>
                 <Icon name="FiSend" className="w-3.5 h-3.5" />
-                <span>Submit Official Inquiry</span>
+                <span>Send Message</span>
               </>
             )}
           </button>
 
           <span className="text-[11px] font-mono text-slate-400">
-            Official Email: {BBCI_ORG.officialEmail}
+            Direct: {BBCI_ORG.officialEmail}
           </span>
         </div>
       </form>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import BbciLogo from './BbciLogo';
+import bbciLogoImg from '../assets/BBCI_Logo.jpeg';
 import Icon from './Icon';
 import { BBCI_ORG } from '../data/organization';
 
@@ -15,38 +15,49 @@ export default function Footer() {
           
           {/* Identity Column */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-bbci-magenta rounded-lg">
-              <BbciLogo size="md" inverted={true} showFullName={true} />
+            <Link to="/" className="inline-flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-bbci-magenta rounded-lg group">
+              <div className="bg-white p-1.5 rounded-xl shadow-md border border-slate-700/60 flex items-center justify-center">
+                <img 
+                  src={bbciLogoImg} 
+                  alt="Binary Brains Council of Intellects Official Logo" 
+                  className="h-12 w-12 sm:h-14 sm:w-14 object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="font-extrabold tracking-wider leading-none text-base md:text-lg uppercase text-white">
+                  BBCI
+                </span>
+                <span className="text-[10px] md:text-xs font-semibold tracking-wider uppercase text-slate-300 mt-1">
+                  Binary Brains Council of Intellects
+                </span>
+              </div>
             </Link>
             
-            <p className="text-sm text-slate-400 font-editorial italic max-w-sm">
+            <p className="text-sm text-slate-300 font-editorial italic max-w-sm">
               "{BBCI_ORG.tagline}"
             </p>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Binary Brains Council of Intellects is a voluntary, non-profit, non-political, and non-religious intellectual council dedicated to interdisciplinary research, collaborative innovation, and shared knowledge generation.
+              An international, non-profit intellectual and research organization uniting scientists, engineers, and scholars across disciplines to build frontier technology and lasting collaborative research.
             </p>
 
-            {/* Official Digital Handles */}
-            <div className="pt-2">
-              <div className="text-[11px] font-mono uppercase tracking-wider text-slate-500 mb-1">
-                Official Digital Handles
-              </div>
+            {/* Social Media & Handles */}
+            <div className="pt-2 space-y-2.5">
               <div className="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
-                <span className="bg-slate-800 px-2.5 py-1 rounded border border-slate-700">
+                <span className="bg-slate-800/90 px-2.5 py-1 rounded border border-slate-700">
                   {BBCI_ORG.socialHandles.primary}
                 </span>
-                <span className="bg-slate-800 px-2.5 py-1 rounded border border-slate-700">
+                <span className="bg-slate-800/90 px-2.5 py-1 rounded border border-slate-700">
                   {BBCI_ORG.socialHandles.secondary}
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Quick Links Column 1: Governance & Council */}
+          {/* Quick Links Column 1: Organization */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-              Council & Governance
+              Organization
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
@@ -56,7 +67,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/people" className="hover:text-white transition-colors">
-                  Founding Members
+                  Leadership &amp; Fellows
                 </Link>
               </li>
               <li>
@@ -65,57 +76,56 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/constitution" className="hover:text-white transition-colors flex items-center gap-1.5 text-slate-200">
-                  <Icon name="FiBookmark" className="w-3.5 h-3.5 text-bbci-magenta" />
-                  <span>Official Constitution</span>
+                <Link to="/membership" className="hover:text-white transition-colors">
+                  Council Membership
                 </Link>
               </li>
               <li>
                 <Link to="/about#principles" className="hover:text-white transition-colors">
-                  Code of Conduct & Principles
+                  Core Values &amp; Ethics
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Quick Links Column 2: Initiatives & Intellectual Output */}
+          {/* Quick Links Column 2: Research & Innovation */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-              Research & Initiatives
+              Research &amp; Labs
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
                 <Link to="/research" className="hover:text-white transition-colors">
-                  Research Overview
+                  Research Divisions
                 </Link>
               </li>
               <li>
                 <Link to="/projects" className="hover:text-white transition-colors">
-                  Project Registry
+                  Active Projects &amp; Labs
                 </Link>
               </li>
               <li>
                 <Link to="/publications" className="hover:text-white transition-colors">
-                  Publications Repository
+                  Publications &amp; White Papers
                 </Link>
               </li>
               <li>
                 <Link to="/activities" className="hover:text-white transition-colors">
-                  Recurring Schedule
+                  Colloquia &amp; Symposiums
                 </Link>
               </li>
               <li>
-                <Link to="/activities#competitions" className="hover:text-white transition-colors">
-                  Fests & Competitions
+                <Link to="/projects#ip-equity" className="hover:text-white transition-colors">
+                  Creator IP &amp; Patent Model
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Quick Links Column 3: Communication & Inquiries */}
+          {/* Quick Links Column 3: Global Contact */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-              Official Communication
+              Connect With Us
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li className="flex items-start gap-2">
@@ -133,33 +143,39 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <Icon name="FiMapPin" className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
-                <span>Monthly Physical Venue: ESRC</span>
+                <span>Symposium Venue: ESRC</span>
               </li>
             </ul>
 
             <div className="pt-2">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded border border-slate-700 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-bbci-indigo hover:bg-bbci-indigo-light px-3.5 py-2 rounded-lg transition-colors shadow-sm"
               >
-                <span>Institutional Inquiries</span>
-                <Icon name="FiChevronRight" className="w-3.5 h-3.5" />
+                <span>Partner or Inquire</span>
+                <Icon name="FiArrowRight" className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>
 
         </div>
 
-        {/* Bottom Bar: Copyright & Supreme Governance Notice */}
+        {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
             <span>&copy; {currentYear} Binary Brains Council of Intellects (BBCI).</span>
-            <span className="hidden sm:inline">|</span>
+            <span className="hidden sm:inline">·</span>
             <span>All rights reserved.</span>
           </div>
 
-          <div className="text-center md:text-right font-mono text-[11px] text-slate-400">
-            Governing Document: <Link to="/constitution" className="underline hover:text-white">Constitution Ref. {BBCI_ORG.referenceNo}</Link>
+          <div className="flex items-center gap-4 text-xs text-slate-400">
+            <Link to="/about" className="hover:text-white transition-colors">Mission</Link>
+            <span>·</span>
+            <Link to="/research" className="hover:text-white transition-colors">Research</Link>
+            <span>·</span>
+            <Link to="/membership" className="hover:text-white transition-colors">Join Council</Link>
+            <span>·</span>
+            <Link to="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
         </div>
 

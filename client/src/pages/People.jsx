@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import SectionHeading from '../components/SectionHeading';
 import PersonCard from '../components/PersonCard';
@@ -10,18 +11,18 @@ export default function People() {
     <div className="space-y-16 md:space-y-24 pb-24">
       {/* Header */}
       <PageHeader
-        eyebrow="Institutional Leadership"
-        title="Council Members &amp; Office Bearers"
-        description="The governing individuals, founding signatories, and executive officers responsible for the leadership, administration, and research stewardship of BBCI."
-        breadcrumbs={[{ label: 'People & Leadership' }]}
+        eyebrow="Leadership &amp; Fellows"
+        title="Founding Council &amp; Executive Directorate"
+        description="Meet the founding fellows, executive directors, and division leads guiding the scientific, technological, and global operations of the Binary Brains Council of Intellects."
+        breadcrumbs={[{ label: 'Leadership & People' }]}
       />
 
-      {/* 1. Founding Members Section */}
+      {/* 1. Founding Fellows Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Founding Signatories"
-          title="Founding Members of BBCI"
-          description="The eight founding individuals who established BBCI on 02 October 2026. Sk Azmain Zunaeid holds the permanent and personal title of Founder; the seven other members are Co-Founders on equal footing."
+          eyebrow="Founding Council"
+          title="Founding Fellows of BBCI"
+          description="The eight founding leaders who established the Binary Brains Council of Intellects. Sk Azmain Zunaeid serves as Founder & President alongside seven Co-Founding Fellows."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -31,52 +32,48 @@ export default function People() {
         </div>
       </section>
 
-
-      {/* 2. Executive Committee (Annex A) */}
+      {/* 2. Executive Directorate */}
       <section id="executive-committee" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Current Office Bearers"
-          title="Executive Committee Roster"
-          description="The operational body responsible for day-to-day administration, financial stewardship, media broadcasts, project grants, and research monitoring."
+          eyebrow="Executive Directorate"
+          title="Executive Committee &amp; Division Leads"
+          description="The operational leadership responsible for research coordination, endowment management, global partnerships, digital platforms, and symposium programming."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {EXECUTIVE_COMMITTEE.map((officer, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-card-hover hover:border-bbci-indigo/30 transition-all flex flex-col justify-between"
+              className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-elevated hover:border-bbci-indigo/30 transition-all flex flex-col justify-between"
             >
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-slate-100 text-bbci-teal px-2 py-0.5 rounded border border-slate-200">
-                    Tier 0{officer.tier} Executive
-                  </span>
-                  <span className="text-[10px] font-mono text-slate-400">
-                    Reports: {officer.reportsTo}
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-slate-100 text-bbci-teal px-2.5 py-0.5 rounded-md border border-slate-200">
+                    {officer.division || "Executive Division"}
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-base font-bold text-slate-900">
+                  <h3 className="text-base font-extrabold text-slate-900">
                     {officer.position}
                   </h3>
-                  <div className="text-xs font-semibold text-bbci-indigo mt-0.5">
+                  <div className="text-xs font-bold text-bbci-indigo mt-0.5">
                     {officer.officeHolder}
                   </div>
                   {officer.note && (
-                    <div className="mt-1 text-[11px] text-amber-700 font-mono bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                    <div className="mt-1.5 inline-block text-[10px] text-bbci-magenta font-mono bg-pink-50 px-2 py-0.5 rounded border border-pink-200">
                       {officer.note}
                     </div>
                   )}
                 </div>
 
-                <div className="pt-2">
-                  <div className="text-[11px] font-mono uppercase text-slate-400 font-bold mb-1.5">
-                    Key Responsibilities:
+                <div className="pt-2 border-t border-slate-100">
+                  <div className="text-[10px] font-mono uppercase text-slate-400 font-bold mb-2">
+                    Core Portfolio:
                   </div>
                   <ul className="space-y-1.5 text-xs text-slate-600">
                     {officer.responsibilities.map((resp, i) => (
-                      <li key={i} className="flex items-start gap-1.5">
+                      <li key={i} className="flex items-start gap-2">
                         <Icon name="FiCheck" className="w-3.5 h-3.5 text-bbci-teal flex-shrink-0 mt-0.5" />
                         <span>{resp}</span>
                       </li>
@@ -85,79 +82,68 @@ export default function People() {
                 </div>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-slate-100 text-[10px] font-mono text-slate-400 flex items-center justify-between">
-                <span>Executive Record</span>
-                <span>Verified Active</span>
+              <div className="pt-4 mt-5 border-t border-slate-100 text-[10px] font-mono text-slate-400 flex items-center justify-between">
+                <span>BBCI Directorate</span>
+                <span className="text-emerald-600 font-semibold">Active Office</span>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-
       {/* 3. Interactive Hierarchy & Reporting Diagram */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Structure Visualization"
-          title="Chains of Authority &amp; Oversight"
-          description="Visual architecture demonstrating reporting flows between Founding Members, the President, General Secretary, and supervisory lines."
+          eyebrow="Organizational Architecture"
+          title="Directorate &amp; Research Lab Structure"
+          description="How BBCI coordinates across the Executive Directorate, Regional Chapters, and Autonomous Project Labs."
         />
 
         <OrgChart />
       </section>
 
-
-      {/* 4. Regional & Project Leadership (Annex B Architecture) */}
+      {/* 4. Global Chapters & Research Hubs */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="International Charters"
-          title="Regional &amp; Project Leadership"
-          description="Regional Heads and Project Groups are established by resolution of the Founding Members as international expansion proceeds."
+          eyebrow="Global Footprint"
+          title="Regional Hubs &amp; Institutional Chapters"
+          description="BBCI operates through both physical symposium hubs and a borderless virtual research network, enabling scholars and engineers worldwide to collaborate."
         />
 
-        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6">
-          <div className="max-w-3xl space-y-2">
-            <h3 className="text-base font-bold text-slate-900">
-              Regional Administrative Record Template
-            </h3>
-            <p className="text-xs text-slate-600 font-editorial leading-relaxed">
-              Regional structures shall be populated and updated by resolution of the Founding Members as regions, Regional Heads, Assistant Heads, and Project Groups are designated.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {REGIONAL_STRUCTURE_STATUS.chapters.map((chapter, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between space-y-4"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-bbci-indigo">
+                    <Icon name="FiGlobe" className="w-5 h-5" />
+                  </div>
+                  <span className="text-[11px] font-mono font-semibold text-bbci-teal bg-slate-100 px-2.5 py-0.5 rounded-full">
+                    {chapter.status}
+                  </span>
+                </div>
+                <h3 className="text-base font-extrabold text-slate-900">
+                  {chapter.region}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                  {chapter.focus}
+                </p>
+              </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs border border-slate-200 rounded-lg overflow-hidden">
-              <thead className="bg-slate-100 text-slate-700 font-mono uppercase text-[11px]">
-                <tr>
-                  <th className="p-3 border-b border-slate-200">Region</th>
-                  <th className="p-3 border-b border-slate-200">Regional Head</th>
-                  <th className="p-3 border-b border-slate-200">Regional Assistant Head</th>
-                  <th className="p-3 border-b border-slate-200">Project Group</th>
-                  <th className="p-3 border-b border-slate-200">Project Leader</th>
-                  <th className="p-3 border-b border-slate-200">Project Members</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-200 font-mono text-slate-500">
-                {REGIONAL_STRUCTURE_STATUS.annexBTemplate.map((row, idx) => (
-                  <tr key={idx} className="hover:bg-slate-50">
-                    <td className="p-3 text-slate-400 italic">{row.region}</td>
-                    <td className="p-3 text-slate-400 italic">{row.regionalHead}</td>
-                    <td className="p-3 text-slate-400 italic">{row.assistantHead}</td>
-                    <td className="p-3 text-slate-400 italic">{row.projectGroup}</td>
-                    <td className="p-3 text-slate-400 italic">{row.projectLeader}</td>
-                    <td className="p-3 text-slate-400 italic">{row.projectMembers}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-3 text-xs text-slate-600 font-editorial">
-            <Icon name="FiInfo" className="w-4 h-4 text-bbci-teal flex-shrink-0 mt-0.5" />
-            <span>
-              Reporting order within this structure: <strong>President &amp; General Secretary &rarr; Regional Heads &rarr; Regional Assistant Heads &rarr; Project Leaders &rarr; Project Members</strong>, pursuant to organizational governance guidelines.
-            </span>
-          </div>
+              <div className="pt-4 border-t border-slate-100">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-bbci-indigo hover:text-bbci-magenta transition-colors"
+                >
+                  <span>Connect With Hub</span>
+                  <Icon name="FiArrowRight" className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

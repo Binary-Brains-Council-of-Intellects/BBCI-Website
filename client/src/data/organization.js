@@ -1,10 +1,9 @@
 /**
  * BINARY BRAINS COUNCIL OF INTELLECTS (BBCI)
- * Official Organizational Data Source of Truth
- * Source: BBCI Official Constitution (Ref No: BBCI/2026/OFFICIAL/1 | Date: 02 October 2026)
+ * Official Organizational Data
  */
 
-export const PLACEHOLDER_IMAGE = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFhudypvyZZICQL3fV0B9pa3wA81FTMEU62jqosetlv_jUBdcNAb58Laiz&s=10";
+export const PLACEHOLDER_IMAGE = "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80";
 export const LOCAL_PLACEHOLDER_IMAGE = "/placeholder.jpg";
 
 export const BBCI_ORG = {
@@ -19,175 +18,195 @@ export const BBCI_ORG = {
     primary: "@binarybrains-bbci",
     secondary: "@binarybrains.bbci",
   },
-  referenceNo: "BBCI/2026/OFFICIAL/1",
-  constitutionDate: "02 October 2026",
-  status: "Voluntary, Non-profit, Non-political, Non-religious Intellectual Council",
+  foundedYear: "2026",
+  status: "Global Non-Profit Intellectual & Research Council",
   
   brandColors: {
     indigo: {
       name: "Deep Indigo",
       hex: "#2E2F81",
       rgb: "46, 47, 129",
-      symbolism: "Represents the '1's, authority, and structural discipline",
+      symbolism: "Represents the binary '1's, foundational authority, and structural precision",
     },
     teal: {
       name: "Slate Teal",
       hex: "#4F6D78",
       rgb: "79, 109, 120",
-      symbolism: "Represents the analytical / structured left brain",
+      symbolism: "Represents the analytical, empirical, and structured left hemisphere",
     },
     magenta: {
       name: "Magenta",
       hex: "#EE4A7F",
       rgb: "238, 74, 127",
-      symbolism: "Represents the creative / networked right brain",
+      symbolism: "Represents the creative, interconnected, and visionary right hemisphere",
     },
   },
 
   vision: "To build a thriving, self-sustaining global community where intellectuals from diverse fields unite, collaborate, and innovate for the advancement of knowledge and society.",
 
-  mission: "To ultimately create a group where intellectuals of different fields will collaborate on projects, research, and other activities, thereby generating a lasting body of shared intellectual work.",
+  mission: "To cultivate an international ecosystem where researchers, engineers, and scholars across disciplines collaborate on frontier projects, peer-reviewed research, and technological innovation—generating a lasting body of shared intellectual work.",
 
   objectives: [
     {
       id: 1,
-      title: "Connect Intellectual Minds",
-      description: "To connect intellectual minds worldwide, regardless of geography, background, or discipline.",
-      icon: "Globe"
+      title: "Global Intellectual Network",
+      description: "Connecting exceptional thinkers, scientists, and engineers worldwide across geographical and disciplinary boundaries.",
+      icon: "FiGlobe"
     },
     {
       id: 2,
-      title: "Collaborative Projects",
-      description: "To undertake projects both individually within the group and collaboratively with external laboratories, organizations, and industries.",
-      icon: "Cpu"
+      title: "Collaborative Research Labs",
+      description: "Undertaking frontier research and engineering projects both within autonomous BBCI working groups and with external partner institutions.",
+      icon: "FiCpu"
     },
     {
       id: 3,
-      title: "Structured Programs",
-      description: "To organize and hold Weekly, Monthly, and Yearly programs for its members to foster continuous growth.",
-      icon: "Calendar"
+      title: "Symposiums & Colloquia",
+      description: "Hosting weekly global deliberations, monthly in-person research symposiums, technical workshops, and annual innovation fests.",
+      icon: "FiCalendar"
     },
     {
       id: 4,
-      title: "Research & Publications",
-      description: "To publish rigorous research papers under the Council's name in recognized academic and technical venues.",
-      icon: "BookOpen"
+      title: "Scholarly Publications",
+      description: "Publishing peer-reviewed research papers, technical reports, and foundational white papers in recognized international venues.",
+      icon: "FiBookOpen"
     },
     {
       id: 5,
-      title: "Innovation & Patents",
-      description: "To develop projects and pursue patents arising from the Council's collaborative and interdisciplinary work.",
-      icon: "Lightbulb"
+      title: "Patents & Deep-Tech Innovation",
+      description: "Translating theoretical breakthroughs into functional prototypes, open-source frameworks, and protected intellectual property.",
+      icon: "FiZap"
     },
+    {
+      id: 6,
+      title: "Creator-First IP Equity",
+      description: "Empowering innovators with a transparent 70/30 royalty model that guarantees joint attribution and rewards original creators.",
+      icon: "FiAward"
+    }
   ],
 
   areasOfWork: [
     {
-      title: "Technology",
-      desc: "Architecting software, systems, algorithmic frameworks, and experimental computational tools.",
+      id: "ai-cognitive",
+      title: "Artificial Intelligence & Cognitive Systems",
+      desc: "Neural-symbolic architectures, machine reasoning, foundation models, and human-centered autonomous intelligence.",
+      icon: "FiCpu",
       symbol: "0101"
     },
     {
-      title: "Scientific Research",
-      desc: "Pursuing empirical and theoretical inquiry across disciplinary intersections and scientific frontiers.",
-      symbol: "λ/dx"
+      id: "distributed-systems",
+      title: "Systems Engineering & Distributed Computing",
+      desc: "High-performance computing, resilient peer-to-peer networks, cryptographic security, and scalable cloud infrastructure.",
+      icon: "FiDatabase",
+      symbol: "SYS"
     },
     {
-      title: "Interdisciplinary Collaboration",
-      desc: "Bridging analytical rigor and creative synthesis between engineering, sciences, arts, and humanities.",
-      symbol: "⋈"
+      id: "computational-science",
+      title: "Computational Sciences & Applied Mathematics",
+      desc: "Algorithmic modeling, complex dynamical systems, network theory, optimization, and formal verification.",
+      icon: "FiCode",
+      symbol: "f(x)"
     },
     {
-      title: "Innovation & Patents",
-      desc: "Translating theoretical solutions into intellectual property, functional prototypes, and practical inventions.",
-      symbol: "℗"
+      id: "robotics-hardware",
+      title: "Robotics, Autonomous Systems & Edge Hardware",
+      desc: "Swarm robotics, embedded micro-systems, sensor fusion, IoT telemetry, and next-generation hardware prototyping.",
+      icon: "FiZap",
+      symbol: "HW"
     },
     {
-      title: "Publications",
-      desc: "Documenting peer-reviewed discoveries, technical reports, white papers, and constitutional archives.",
-      symbol: "§"
+      id: "bio-frontier",
+      title: "Bioinformatics & Frontier Sciences",
+      desc: "Computational genomics, multi-omics analysis, climate modeling, and data-driven scientific discovery.",
+      icon: "FiActivity",
+      symbol: "BIO"
     },
     {
-      title: "Knowledge Exchange",
-      desc: "Conducting weekly deliberations, monthly symposiums, advanced workshops, and international competitions.",
-      symbol: "↔"
+      id: "interdisciplinary",
+      title: "Interdisciplinary Innovation & Knowledge Transfer",
+      desc: "Bridging analytical engineering with creative synthesis, scientific publishing, and global technical education.",
+      icon: "FiLayers",
+      symbol: "NET"
     },
   ],
 
   principles: [
     {
-      title: "Non-profit, Non-political, Non-religious",
-      desc: "BBCI operates strictly for intellectual advancement. It shall never affiliate with any political movement or religious bias."
+      title: "Independent & Non-Partisan",
+      desc: "BBCI operates strictly as a non-profit, non-political, and non-religious organization dedicated purely to scientific and intellectual advancement."
     },
     {
-      title: "Intellectual Curiosity & Merit",
-      desc: "Members must demonstrate intellectualism, curiosity, and good faith when joining and throughout their membership."
+      title: "Meritocracy & Intellectual Rigor",
+      desc: "Admission, leadership, and project fellowship are grounded exclusively in intellectual curiosity, technical capability, and scholarly integrity."
     },
     {
-      title: "Respect & Professional Courtesy",
-      desc: "Members treat one another with fairness, respect, dignity, and professional courtesy at all times."
+      title: "Open Inquiry & Interdisciplinary Respect",
+      desc: "We foster an environment of rigorous peer review, constructive discourse, and mutual respect across all scientific and creative disciplines."
     },
     {
-      title: "Responsible Representation",
-      desc: "Members representing BBCI in fests, competitions, or public platforms must uphold its dignity and act strictly within approved mandates."
+      title: "Global Representation & Excellence",
+      desc: "Members representing BBCI at international conferences, hackathons, and olympiads uphold the highest standards of research ethics."
     },
     {
-      title: "Conflict of Interest Disclosure",
-      desc: "Any conflict of interest shall be disclosed promptly to the President or General Secretary to ensure complete institutional integrity."
+      title: "Transparency & Ethical Stewardship",
+      desc: "Full transparency in research attribution, peer review, and institutional resource allocation ensures enduring trust."
     },
     {
-      title: "Constitutional Governance",
-      desc: "All activities, appointments, and fiscal allocations conform strictly to the supreme authority of the BBCI Official Constitution."
+      title: "Shared Legacy & Co-Attribution",
+      desc: "Every discovery and invention advances both the individual researcher's career and the collective scientific heritage of the Council."
     }
   ],
 
   membership: {
-    eligibility: "Membership is open to any individual who demonstrates genuine intellectual curiosity, capability, and commitment at the time of joining. The Council reserves the right to assess prospective members through an application, interview, or evaluation process determined by the Executive Committee from time to time.",
+    eligibility: "Membership in the Binary Brains Council of Intellects is open to researchers, engineers, scholars, and university innovators worldwide who demonstrate exceptional intellectual curiosity, technical capability, and commitment to collaborative discovery.",
     categories: [
       {
-        name: "Founding Members",
-        details: "The eight individuals who established the Council and who retain supreme governance authority.",
+        name: "Founding Fellows",
+        badge: "Charter Leadership",
+        details: "The eight founding council members who established BBCI's institutional vision, research architecture, and global governance.",
       },
       {
-        name: "General Members",
-        details: "All individuals formally admitted to the Council following registration, evaluation, and regular dues payment.",
+        name: "General Council Members",
+        badge: "Core Membership",
+        details: "Admitted researchers, engineers, students, and scholars participating in colloquia, symposiums, and council-wide initiatives.",
       },
       {
-        name: "Project Members",
-        details: "General or Founding Members actively assigned to a specific research, technology, or innovation project group.",
+        name: "Research & Project Fellows",
+        badge: "Lab Contributors",
+        details: "Members actively assigned to specialized BBCI research groups, co-authoring publications, and building technical prototypes.",
       }
     ],
     fees: {
       registration: "BDT 500",
-      registrationNote: "One-time registration fee at the time of joining.",
+      registrationNote: "One-time institutional onboarding and registration fee upon admission.",
       monthly: "BDT 300",
-      monthlyNote: "Recurring monthly membership fee starting the month following registration.",
-      constitutionalNote: "Fee amounts are established pursuant to the BBCI Constitution and may be revised solely through constitutional amendment."
+      monthlyNote: "Monthly contribution supporting research compute, symposiums, and lab grants.",
+      constitutionalNote: "100% of member contributions are reinvested into research projects, publication support, and technical programs."
     },
     rights: [
-      "Participate in the general activities, meetings, and programs of the Council.",
-      "Propose, join, and contribute to project groups, subject to Council project policy.",
-      "Be considered for Committee, Regional, and Project Leadership positions.",
-      "Receive fair, respectful, and non-discriminatory treatment from all members and officers.",
-      "Raise concerns or grievances directly to the President or General Secretary.",
-      "Be considered for representing the Council in external fests, competitions, and hackathons."
+      "Participate in weekly global colloquia, monthly research symposiums, and annual innovation fests.",
+      "Propose, lead, or join interdisciplinary research and engineering project groups.",
+      "Receive 70% creator royalty equity and guaranteed co-attribution on all patented or commercialized innovations.",
+      "Access council research mentorship, peer-review networks, and publication support.",
+      "Represent BBCI at international hackathons, academic conferences, and technical competitions.",
+      "Advance into Regional Leadership, Project Lead, and Executive Committee roles."
     ],
     obligations: [
-      "Abide by this Constitution and all duly adopted rules and decisions of the Council.",
-      "Pay registration and monthly membership dues in a timely manner.",
-      "Conduct themselves with honesty, professionalism, and mutual respect.",
-      "Fulfil responsibilities undertaken within project groups, regional roles, or committee duties."
+      "Uphold the highest standards of scientific integrity, original research, and ethical collaboration.",
+      "Contribute actively to assigned research tracks, working groups, or scholarly reviews.",
+      "Maintain active standing through regular participation and timely institutional dues.",
+      "Foster an inclusive, respectful, and intellectually rigorous environment for all fellow members."
     ]
   },
 
   ipPolicy: {
-    jointCredit: "All projects and papers produced under the Council's auspices shall be published in, and shall carry, the name of BBCI jointly and inseparably alongside the names of the actual creators, authors, or inventors. The Council's name shall never be omitted nor substituted.",
+    jointCredit: "All research papers, software frameworks, and inventions developed within BBCI labs carry joint attribution—crediting the individual authors and inventors alongside the Binary Brains Council of Intellects.",
     royaltyDistribution: {
       creatorsShare: "70%",
-      creatorsDesc: "Distributed among the actual creators and contributors of the intellectual work.",
+      creatorsDesc: "Directly awarded to the researchers, engineers, and creators who built the work.",
       councilShare: "30%",
-      councilDesc: "Retained by BBCI for institutional sustainment, future project funding, and council grants.",
+      councilDesc: "Reinvested into the BBCI Research Endowment to fund future lab grants and student innovations.",
     },
-    ownership: "Subject to the royalty-sharing arrangement, BBCI holds joint ownership and royalty rights, together with the actual creators, in all such projects, publications, and patents."
+    ownership: "BBCI's creator-first IP framework ensures researchers retain primary financial benefit while leveraging the institutional backing and patent support of an international council."
   }
 };

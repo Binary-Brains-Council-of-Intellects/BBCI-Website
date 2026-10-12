@@ -3,14 +3,11 @@ import Icon from './Icon';
 import { PLACEHOLDER_IMAGE, LOCAL_PLACEHOLDER_IMAGE } from '../data/organization';
 
 export default function PersonCard({ person }) {
-  const [imgSrc, setImgSrc] = useState(person.image || LOCAL_PLACEHOLDER_IMAGE);
+  const [hasError, setHasError] = useState(false);
 
-  const handleImageError = () => {
-    // If local placeholder fails, fallback to remote placeholder image provided by user
-    if (imgSrc !== PLACEHOLDER_IMAGE) {
-      setImgSrc(PLACEHOLDER_IMAGE);
-    }
-  };
+  const imgSrc = hasError
+    ? PLACEHOLDER_IMAGE
+    : person.image || LOCAL_PLACEHOLDER_IMAGE;
 
   const isFounder = person.isFounder || person.role === "Founder";
 
@@ -23,9 +20,9 @@ export default function PersonCard({ person }) {
         <div className="relative w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 rounded-lg overflow-hidden border border-slate-200 bg-slate-100 shadow-inner">
           <img 
             src={imgSrc} 
-            alt={person.name} 
-            onError={handleImageError}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            alt={person.imageAlt || person.name || person.officeHolder} 
+            onError={() => setHasError(true)}
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" 
             loading="lazy"
           />
           {/* Subtle overlay accent */}

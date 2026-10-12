@@ -53,18 +53,28 @@ export default function People() {
                   </span>
                 </div>
 
-                <div>
-                  <h3 className="text-base font-extrabold text-slate-900">
-                    {officer.position}
-                  </h3>
-                  <div className="text-xs font-bold text-bbci-indigo mt-0.5">
-                    {officer.officeHolder}
-                  </div>
-                  {officer.note && (
-                    <div className="mt-1.5 inline-block text-[10px] text-bbci-magenta font-mono bg-pink-50 px-2 py-0.5 rounded border border-pink-200">
-                      {officer.note}
-                    </div>
+                <div className="flex items-center gap-3.5">
+                  {officer.image && (
+                    <img
+                      src={officer.image}
+                      alt={officer.imageAlt || officer.officeHolder}
+                      className="w-14 h-14 rounded-xl object-cover object-top border border-slate-200 flex-shrink-0 bg-slate-100"
+                      loading="lazy"
+                    />
                   )}
+                  <div>
+                    <h3 className="text-base font-extrabold text-slate-900">
+                      {officer.position}
+                    </h3>
+                    <div className="text-xs font-bold text-bbci-indigo mt-0.5">
+                      {officer.officeHolder}
+                    </div>
+                    {officer.note && (
+                      <div className="mt-1.5 inline-block text-[10px] text-bbci-magenta font-mono bg-pink-50 px-2 py-0.5 rounded border border-pink-200">
+                        {officer.note}
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 <div className="pt-2 border-t border-slate-100">

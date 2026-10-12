@@ -3,7 +3,42 @@
  * Leadership & Council Fellows Directory
  */
 
-import { PLACEHOLDER_IMAGE, LOCAL_PLACEHOLDER_IMAGE } from './organization';
+import { PLACEHOLDER_IMAGE } from './organization';
+
+export const MEMBER_PHOTOS = {
+  "Sk Azmain Zunaeid": {
+    url: "https://i.ibb.co.com/SgzRQXy/Professional-Profile-Picture-for-Binary-Brains-of-Sk-Azmain-Zunaeid-JPG-jpg.jpg",
+    alt: "Professional-Profile-Picture-for-Binary-Brains-of-Sk-Azmain-Zunaeid-JPG-jpg"
+  },
+  "Md Delower Sarker": {
+    url: "https://i.ibb.co.com/mV82kmMC/Professional-Profile-Picture-for-Binary-Brains-of-Md-Delower-Sarker-JPG-jpg.jpg",
+    alt: "Professional-Profile-Picture-for-Binary-Brains-of-Md-Delower-Sarker-JPG-jpg"
+  },
+  "Tahmid Ibne Mofazzol": {
+    url: "https://i.ibb.co.com/KxFPj0jz/Professional-Profile-Picture-for-Binary-Brains-of-Tahmid-Ibne-Mofazzol-JPG-jpg.jpg",
+    alt: "Professional-Profile-Picture-for-Binary-Brains-of-Tahmid-Ibne-Mofazzol-JPG-jpg"
+  },
+  "Syeda Zawada Farah": {
+    url: "https://i.ibb.co.com/HLfFWtRR/Professional-Profile-Picture-for-Binary-Brains-of-Syeda-Zawada-Farah-JPG-jpg.jpg",
+    alt: "Professional-Profile-Picture-for-Binary-Brains-of-Syeda-Zawada-Farah-JPG-jpg"
+  },
+  "Md Maruf Mia": {
+    url: "https://i.ibb.co.com/C3B4qC2Z/Professional-Profile-Picture-for-Binary-Brains-of-Md-Maruf-Mia-JPG-jpg.jpg",
+    alt: "Professional-Profile-Picture-for-Binary-Brains-of-Md-Maruf-Mia-JPG-jpg"
+  },
+  "Maher Afruz Mira": {
+    url: "https://i.ibb.co.com/h1R4tG5z/Professional-Profile-Picture-for-Binary-Brains-of-Maher-Afruz-Mira-JPG-jpg.jpg",
+    alt: "Professional-Profile-Picture-for-Binary-Brains-of-Maher-Afruz-Mira-JPG-jpg"
+  },
+  "Md Tahamid Hassan Sadib": {
+    url: "https://i.ibb.co.com/m539SYtv/Professional-Profile-Picture-for-Binary-Brains-of-Md-Tahamid-Hassan-Sadib-JPG-jpg.jpg",
+    alt: "Professional-Profile-Picture-for-Binary-Brains-of-Md-Tahamid-Hassan-Sadib-JPG-jpg"
+  },
+  "Abu Sufian Ratul": {
+    url: "https://i.ibb.co.com/4Rh1h9Fv/Professional-Profile-Picture-for-Binary-Brains-of-Abu-Sufian-ratul-JPG-jpg.jpg",
+    alt: "Professional-Profile-Picture-for-Binary-Brains-of-Abu-Sufian-ratul-JPG-jpg"
+  }
+};
 
 export const FOUNDING_MEMBERS = [
   {
@@ -12,7 +47,8 @@ export const FOUNDING_MEMBERS = [
     role: "Founder",
     type: "Founder",
     executiveRole: "President",
-    image: LOCAL_PLACEHOLDER_IMAGE,
+    image: MEMBER_PHOTOS["Sk Azmain Zunaeid"].url,
+    imageAlt: MEMBER_PHOTOS["Sk Azmain Zunaeid"].alt,
     fallbackImage: PLACEHOLDER_IMAGE,
     responsibility: "Spearheads BBCI's global vision and scientific direction, chairs council deliberations, oversees institutional strategy, and leads international research governance.",
     isFounder: true
@@ -23,7 +59,8 @@ export const FOUNDING_MEMBERS = [
     role: "Co-Founder",
     type: "Co-Founder",
     executiveRole: "General Secretary & Head of Media Operations",
-    image: LOCAL_PLACEHOLDER_IMAGE,
+    image: MEMBER_PHOTOS["Md Delower Sarker"].url,
+    imageAlt: MEMBER_PHOTOS["Md Delower Sarker"].alt,
     fallbackImage: PLACEHOLDER_IMAGE,
     responsibility: "Directs organizational operations, coordinates cross-division initiatives, manages institutional documentation, and leads video & broadcast outreach.",
     isFounder: false
@@ -34,7 +71,8 @@ export const FOUNDING_MEMBERS = [
     role: "Co-Founder",
     type: "Co-Founder",
     executiveRole: "Head of Digital Presence & Editorial (SMM I)",
-    image: LOCAL_PLACEHOLDER_IMAGE,
+    image: MEMBER_PHOTOS["Tahmid Ibne Mofazzol"].url,
+    imageAlt: MEMBER_PHOTOS["Tahmid Ibne Mofazzol"].alt,
     fallbackImage: PLACEHOLDER_IMAGE,
     responsibility: "Leads BBCI's official web platform, LinkedIn, and X presence, curating technical editorials, research announcements, and visual brand communications.",
     isFounder: false
@@ -45,7 +83,8 @@ export const FOUNDING_MEMBERS = [
     role: "Co-Founder",
     type: "Co-Founder",
     executiveRole: "Media Secretary",
-    image: LOCAL_PLACEHOLDER_IMAGE,
+    image: MEMBER_PHOTOS["Syeda Zawada Farah"].url,
+    imageAlt: MEMBER_PHOTOS["Syeda Zawada Farah"].alt,
     fallbackImage: PLACEHOLDER_IMAGE,
     responsibility: "Chairs public symposiums and global broadcasts, serves as the official spokesperson for media engagements, and directs creative program production.",
     isFounder: false
@@ -56,7 +95,8 @@ export const FOUNDING_MEMBERS = [
     role: "Co-Founder",
     type: "Co-Founder",
     executiveRole: "Director of External Relations & Partnerships",
-    image: LOCAL_PLACEHOLDER_IMAGE,
+    image: MEMBER_PHOTOS["Md Maruf Mia"].url,
+    imageAlt: MEMBER_PHOTOS["Md Maruf Mia"].alt,
     fallbackImage: PLACEHOLDER_IMAGE,
     responsibility: "Forges strategic partnerships with external laboratories, universities, and industry sponsors, and leads institutional grant and fellowship proposals.",
     isFounder: false
@@ -67,7 +107,8 @@ export const FOUNDING_MEMBERS = [
     role: "Co-Founder",
     type: "Co-Founder",
     executiveRole: "Treasurer I (Research Grants & Finance)",
-    image: LOCAL_PLACEHOLDER_IMAGE,
+    image: MEMBER_PHOTOS["Maher Afruz Mira"].url,
+    imageAlt: MEMBER_PHOTOS["Maher Afruz Mira"].alt,
     fallbackImage: PLACEHOLDER_IMAGE,
     responsibility: "Co-manages the BBCI Research Endowment, oversees project grant disbursements, and maintains transparent institutional financial stewardship.",
     isFounder: false
@@ -78,7 +119,8 @@ export const FOUNDING_MEMBERS = [
     role: "Co-Founder",
     type: "Co-Founder",
     executiveRole: "Treasurer II (Fiscal Strategy & Audits)",
-    image: LOCAL_PLACEHOLDER_IMAGE,
+    image: MEMBER_PHOTOS["Md Tahamid Hassan Sadib"].url,
+    imageAlt: MEMBER_PHOTOS["Md Tahamid Hassan Sadib"].alt,
     fallbackImage: PLACEHOLDER_IMAGE,
     responsibility: "Co-directs fiscal planning, audits research group budgets, oversees membership endowment sustainability, and prepares semi-annual financial reports.",
     isFounder: false
@@ -89,7 +131,8 @@ export const FOUNDING_MEMBERS = [
     role: "Co-Founder",
     type: "Co-Founder",
     executiveRole: "Research & Publications Secretary",
-    image: LOCAL_PLACEHOLDER_IMAGE,
+    image: MEMBER_PHOTOS["Abu Sufian Ratul"].url,
+    imageAlt: MEMBER_PHOTOS["Abu Sufian Ratul"].alt,
     fallbackImage: PLACEHOLDER_IMAGE,
     responsibility: "Directs the BBCI Publications Repository, tracks bi-annual research and patent milestones across all labs, and safeguards creator IP attribution.",
     isFounder: false
@@ -108,7 +151,8 @@ export const EXECUTIVE_COMMITTEE = [
       "Fostering cross-disciplinary collaboration across all divisions"
     ],
     tier: 1,
-    image: LOCAL_PLACEHOLDER_IMAGE
+    image: MEMBER_PHOTOS["Sk Azmain Zunaeid"].url,
+    imageAlt: MEMBER_PHOTOS["Sk Azmain Zunaeid"].alt
   },
   {
     position: "General Secretary",
@@ -121,7 +165,8 @@ export const EXECUTIVE_COMMITTEE = [
       "Facilitating seamless communication across the global membership"
     ],
     tier: 2,
-    image: LOCAL_PLACEHOLDER_IMAGE
+    image: MEMBER_PHOTOS["Md Delower Sarker"].url,
+    imageAlt: MEMBER_PHOTOS["Md Delower Sarker"].alt
   },
   {
     position: "Research & Publications Secretary",
@@ -134,7 +179,8 @@ export const EXECUTIVE_COMMITTEE = [
       "Leading semi-annual research milestone reviews across project groups"
     ],
     tier: 3,
-    image: LOCAL_PLACEHOLDER_IMAGE
+    image: MEMBER_PHOTOS["Abu Sufian Ratul"].url,
+    imageAlt: MEMBER_PHOTOS["Abu Sufian Ratul"].alt
   },
   {
     position: "Representative (External Relations)",
@@ -147,7 +193,8 @@ export const EXECUTIVE_COMMITTEE = [
       "Identifying global opportunities for collaborative innovation"
     ],
     tier: 3,
-    image: LOCAL_PLACEHOLDER_IMAGE
+    image: MEMBER_PHOTOS["Md Maruf Mia"].url,
+    imageAlt: MEMBER_PHOTOS["Md Maruf Mia"].alt
   },
   {
     position: "Media Secretary",
@@ -160,7 +207,8 @@ export const EXECUTIVE_COMMITTEE = [
       "Curating keynote dialogues with visiting scholars"
     ],
     tier: 3,
-    image: LOCAL_PLACEHOLDER_IMAGE
+    image: MEMBER_PHOTOS["Syeda Zawada Farah"].url,
+    imageAlt: MEMBER_PHOTOS["Syeda Zawada Farah"].alt
   },
   {
     position: "Treasurer I",
@@ -173,7 +221,8 @@ export const EXECUTIVE_COMMITTEE = [
       "Supporting sustainable funding for student and fellow innovations"
     ],
     tier: 3,
-    image: LOCAL_PLACEHOLDER_IMAGE
+    image: MEMBER_PHOTOS["Maher Afruz Mira"].url,
+    imageAlt: MEMBER_PHOTOS["Maher Afruz Mira"].alt
   },
   {
     position: "Treasurer II",
@@ -186,7 +235,8 @@ export const EXECUTIVE_COMMITTEE = [
       "Optimizing resource allocation for laboratory hardware and compute"
     ],
     tier: 3,
-    image: LOCAL_PLACEHOLDER_IMAGE
+    image: MEMBER_PHOTOS["Md Tahamid Hassan Sadib"].url,
+    imageAlt: MEMBER_PHOTOS["Md Tahamid Hassan Sadib"].alt
   },
   {
     position: "Digital & Editorial Lead (SMM I)",
@@ -199,7 +249,8 @@ export const EXECUTIVE_COMMITTEE = [
       "Engaging the international community of researchers and students"
     ],
     tier: 3,
-    image: LOCAL_PLACEHOLDER_IMAGE
+    image: MEMBER_PHOTOS["Tahmid Ibne Mofazzol"].url,
+    imageAlt: MEMBER_PHOTOS["Tahmid Ibne Mofazzol"].alt
   },
   {
     position: "Multimedia & Video Lead (SMM II)",
@@ -213,7 +264,8 @@ export const EXECUTIVE_COMMITTEE = [
       "Analyzing audience engagement across multimedia platforms"
     ],
     tier: 3,
-    image: LOCAL_PLACEHOLDER_IMAGE
+    image: MEMBER_PHOTOS["Md Delower Sarker"].url,
+    imageAlt: MEMBER_PHOTOS["Md Delower Sarker"].alt
   }
 ];
 
